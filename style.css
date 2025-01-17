@@ -1,0 +1,111 @@
+body,
+html,
+#main-content {
+  width: 100%;
+  height: 100%;
+}
+
+nav#navigation {
+  font-family: "Barlow", serif;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+nav.bg-body-tertiary {
+  background-color: #3dbeff !important;
+  /* =====i had to use the "!important" annotation here cause of bootstrap. If you don't add the annotation you can't change the background color of the entire nav bar.===== */
+}
+
+#navbarNavAltMarkup {
+  justify-content: flex-end;
+}
+
+.nav-link {
+  margin-right: 3rem;
+  color: white;
+}
+
+#contact-link {
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  border-radius: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-right: initial;
+  color: black;
+  background-color: #fff;
+}
+
+#contact-link:hover {
+  background-color: #f7f7f78a;
+  color: hsl(0, 0%, 100%);
+}
+
+/* div.cont{
+  
+  width: 200px;
+  height: fit-content;
+  margin: 0 auto;
+}
+
+div.pointy{
+  
+  display: flex;
+  justify-content: flex-end;
+  background-color: transparent;
+}
+
+.pointy span{
+  border: 0px;
+  background-color: transparent;
+  display: block;
+  color: white;
+}
+
+div.bod{
+ 
+  padding: 10px;
+  background-color: #fff;
+} */
+/* FOR MOBILE VIEW ====================================================== */
+@media (max-width: 991px) {
+  body {
+    background-color: grey;
+  }
+
+  button.navbar-toggler {
+    border: 0px;
+    color: transparent;
+    /* had to set the color to transparent in order for me to remove the border that appears when you focus on the button because for some reason bootstrap won't let me remove the border */
+  }
+
+  /* button.navbar-toggler:focus{
+    border: 0px;
+  } */
+
+  button.navbar-toggler span {
+    color: white;
+  }
+
+  #navbarNavAltMarkup {
+    background-color: white;
+    position: absolute;
+    padding: 2rem;
+    right: 5%;
+    top: 120%;
+    width: 90vw;
+  }
+
+  .nav-link {
+    margin: 0px 0px 20px 0px;
+    align-self: center;
+    color: black;
+    font-weight: 600;
+  }
+
+  #contact-link {
+    margin: 0px;
+    background-color: #fdd201;
+    padding: 1rem 2rem;
+  }
+}
