@@ -1,111 +1,96 @@
+* {
+  font-family: "Barlow", sans-serif;
+}
+
 body,
-html,
-#main-content {
+html {
   width: 100%;
   height: 100%;
 }
 
-nav#navigation {
-  font-family: "Barlow", serif;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+/* ------------------------------------------------------------------- */
+/* NAV BAR */
+/* ------------------------------------------------------------------- */
+.navbar {
+  background-color: #3dbeff;
 }
 
-nav.bg-body-tertiary {
-  background-color: #3dbeff !important;
-  /* =====i had to use the "!important" annotation here cause of bootstrap. If you don't add the annotation you can't change the background color of the entire nav bar.===== */
+.navbar-brand {
+  color: white;
 }
 
-#navbarNavAltMarkup {
-  justify-content: flex-end;
+.navbar-brand:hover {
+  color: white;
+  /* due to bootstraps default styling, this was added to stop the logo from changing color when hovered over */
+}
+
+.navbar .nav-item {
+  margin-right: 1rem;
+  /* adding more space between the nav links, as the default space added by bootstrap wasn't enough. */
+
+  font-weight: 600;
 }
 
 .nav-link {
-  margin-right: 3rem;
   color: white;
+  /* all nav links have the color, white, as opposed to their initial color. */
 }
 
-#contact-link {
+.contact-btn {
+  background-color: white;
+  color: black;
   font-family: "Fraunces", serif;
   font-weight: 700;
-  border-radius: 2rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  margin-right: initial;
-  color: black;
-  background-color: #fff;
 }
 
-#contact-link:hover {
-  background-color: #f7f7f78a;
-  color: hsl(0, 0%, 100%);
-}
-
-/* div.cont{
-  
-  width: 200px;
-  height: fit-content;
-  margin: 0 auto;
-}
-
-div.pointy{
-  
-  display: flex;
-  justify-content: flex-end;
-  background-color: transparent;
-}
-
-.pointy span{
-  border: 0px;
-  background-color: transparent;
-  display: block;
+.contact-btn:hover {
   color: white;
+  background-color: #ffffff70;
 }
 
-div.bod{
- 
-  padding: 10px;
-  background-color: #fff;
-} */
-/* FOR MOBILE VIEW ====================================================== */
-@media (max-width: 991px) {
+/* ----------------------------------------------------------------- */
+/* MOBILE VIEW STYLES */
+/* ----------------------------------------------------------------- */
+
+@media (max-width: 768px) {
   body {
     background-color: grey;
   }
-
-  button.navbar-toggler {
-    border: 0px;
-    color: transparent;
-    /* had to set the color to transparent in order for me to remove the border that appears when you focus on the button because for some reason bootstrap won't let me remove the border */
-  }
-
-  /* button.navbar-toggler:focus{
-    border: 0px;
-  } */
-
-  button.navbar-toggler span {
-    color: white;
-  }
-
-  #navbarNavAltMarkup {
+  /* ----------------------------------------------------------------- */
+  /* NAV BAR */
+  /* ----------------------------------------------------------------- */
+  .navbar-collapse {
+    position: absolute; /* takes the container of the nav links outside of the nav bar just like in the ui design of the web page */
+    width: 80%;
+    left: 50%; /* moves the element's left edge to the center of the parent. */
+    transform: translateX(
+      -50%
+    ); /* shifts the element itself left by 50% of its own width—so it ends up perfectly centered. */
+    top: 100%; /* so that it sits right under the navigation bar when displayed */
     background-color: white;
-    position: absolute;
-    padding: 2rem;
-    right: 5%;
-    top: 120%;
-    width: 90vw;
+    padding-bottom: 1rem;
   }
 
-  .nav-link {
-    margin: 0px 0px 20px 0px;
-    align-self: center;
+  .navbar li.nav-item { 
+    margin-right: 0;
+    margin-left: 0;
+    text-align: center;
+    /* i used the kind of specificity on this element because without it the style wouldn't overwrite bootstrap's default style */
+  }
+
+  .nav-item {
+    margin: 0.4rem 0px;
+  }
+
+  .nav-link.contact-btn {
+    display: inline-block;
+    /* to make the contact button not to take up the entire width of the parent as it was set that by bootstrap */
+
+    background-color: yellow;
+    padding: 0.7rem 2rem;
+  }
+
+  .nav-item .nav-link {
     color: black;
-    font-weight: 600;
-  }
-
-  #contact-link {
-    margin: 0px;
-    background-color: #fdd201;
-    padding: 1rem 2rem;
   }
 }

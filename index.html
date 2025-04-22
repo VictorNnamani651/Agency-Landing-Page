@@ -35,38 +35,43 @@
     <title>Sunnyside Agency Landing Page</title>
   </head>
   <body>
-    <div id="main-container">
-      <nav
-        id="navigation"
-        class="navbar navbar-expand-lg bg-body-tertiary fixed-top"
-      >
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#"
-            ><img src="images/logo.svg" alt="logo image"
-          /></a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+    <!-- ----------------------------------------------------------- -->
+    <!-- NAV BAR -->
+    <!-- ------------------------------------------------------------ -->
+    <nav class="navbar navbar-expand-md">
+      <div class="container-fluid">
+        <a href="#" class="navbar-brand fw-bolder">sunnyside</a>
+        <button
+          class="navbar-toggler border-0"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
               <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="#">Services</a>
-              <a class="nav-link" href="#">Projects</a>
-              <a id="contact-link" class="nav-link" href="#">CONTACT</a>
-            </div>
-          </div>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Projects</a>
+            </li>
+            <li class="nav-item d-md-inline-block">
+              <a class="nav-link btn rounded-pill px-md-3 contact-btn" href="#"
+                >CONTACT</a
+              >
+            </li>
+          </ul>
         </div>
-      </nav>
-    </div>
+      </div>
+    </nav>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
