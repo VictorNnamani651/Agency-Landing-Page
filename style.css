@@ -49,10 +49,43 @@ html {
 }
 
 /* ----------------------------------------------------------------- */
+/* (#)INTRO SECTION */
+/* ----------------------------------------------------------------- */
+
+#intro > div {
+  height: 91.3vh; /* makes the container take up the remaining height of the view port left by the navbar so that both the navbar and the intro section can be seen in a single glance without scrolling.... you can add a bright colored border to both the nav bar and the intro section to see what i'm saying */
+  background-image: url(images/desktop/image-header.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.intro-section-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 60%;
+  /* this styling was done to position the header text and arrow icon */
+}
+
+.intro-section-content h1 {
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+  color: white;
+  font-size: 5rem;
+  letter-spacing: 0.5rem;
+  text-align: center;
+  font-size: clamp(2rem, 5vw + 1rem, 5rem);
+  /* this font-size was added to make the font size responsive */
+  /* the font size will be 2rem when the screen is small, 5vw + 1rem when the screen is medium and 5rem when the screen is large */
+}
+
+/* ----------------------------------------------------------------- */
 /* MOBILE VIEW STYLES */
 /* ----------------------------------------------------------------- */
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   body {
     background-color: grey;
   }
@@ -71,7 +104,7 @@ html {
     padding-bottom: 1rem;
   }
 
-  .navbar li.nav-item { 
+  .navbar li.nav-item {
     margin-right: 0;
     margin-left: 0;
     text-align: center;
@@ -92,5 +125,30 @@ html {
 
   .nav-item .nav-link {
     color: black;
+  }
+
+  .navbar-toggler-icon {
+    filter: brightness(0) invert(1);
+    /* this was added to make the hamburger icon white */
+  }
+
+  .navbar-toggler:focus {
+    box-shadow: none;
+    /* this was added to remove the blue outline that appears when the hamburger icon is clicked */
+  }
+
+  /* ----------------------------------------------------------------- */
+  /* (#)INTRO SECTION */
+  /* ----------------------------------------------------------------- */
+  #intro > div {
+    background-image: url(images/mobile/image-header.jpg);
+    /* this was added to change the image of the intro section when in mobile view */
+  }
+
+  .intro-section-content {
+    height: 60%;
+    display: flex;
+    justify-content: space-evenly;
+    /* this styling in general was done to position the header text and arrow icon for mobile view */
   }
 }
