@@ -1,11 +1,13 @@
 * {
   font-family: "Barlow", sans-serif;
+  box-sizing: border-box;
 }
 
 body,
 html {
   width: 100%;
   height: 100%;
+  font-family: "Barlow", sans-serif;
 }
 
 /* ------------------------------------------------------------------- */
@@ -57,7 +59,6 @@ html {
   background-image: url(images/desktop/image-header.jpg);
   background-position: center;
   background-size: cover;
-  background-attachment: fixed;
 }
 
 .intro-section-content {
@@ -81,14 +82,110 @@ html {
   /* the font size will be 2rem when the screen is small, 5vw + 1rem when the screen is medium and 5rem when the screen is large */
 }
 
+/* ------------------------------------------------------------------- */
+/* MAIN-CONTENT SECTION */
+/* ------------------------------------------------------------------- */
+.main-content-item {
+  height: 70vh;
+}
+
+.main-content-item h1,
+.main-content-item h2,
+h4 {
+  /* border: 2px solid green; */
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+}
+
+.main-content-item.text-only {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 6rem;
+  background-color: #fffbf8;
+}
+
+.main-content-item.text-only a {
+  color: black;
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  text-decoration-thickness: 0.4rem;
+}
+
+a.yellow-link {
+  text-decoration-color: #faf1b8;
+}
+
+a.red-link {
+  text-decoration-color: #ffdbd2;
+}
+
+.main-content-item.text-only div.center {
+  /* border: 2px solid purple; */
+}
+
+.main-content-item.text-only p {
+  margin: 1rem 0px;
+}
+
+.main-content-item.img-only-1 {
+  background-image: url(images/desktop/image-transform.jpg);
+}
+
+.main-content-item.img-only-2 {
+  background-image: url(images/desktop/image-stand-out.jpg);
+}
+
+.main-content-item.img-with-text {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.main-content-item.img-with-text div.text {
+  text-align: center;
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.main-content-item.img-with-text.iwt-2 div.text p {
+  align-self: center;
+  margin: auto;
+}
+
+.main-content-item p {
+  font-weight: 500;
+}
+.main-content-item.iwt-1 {
+  background-image: url(images/desktop/image-graphic-design.jpg);
+}
+
+.iwt-1 {
+  color: #20544a;
+}
+
+.main-content-item.iwt-2 {
+  background-image: url(images/desktop/image-photography.jpg);
+}
+
+.iwt-2 {
+  color: #1a5768;
+}
+
+.bgi {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* this style applies to all items within the main-content section that have a background image */
+}
+
 /* ----------------------------------------------------------------- */
 /* MOBILE VIEW STYLES */
 /* ----------------------------------------------------------------- */
 
 @media (max-width: 767px) {
-  body {
-    background-color: grey;
-  }
   /* ----------------------------------------------------------------- */
   /* NAV BAR */
   /* ----------------------------------------------------------------- */
@@ -150,5 +247,51 @@ html {
     display: flex;
     justify-content: space-evenly;
     /* this styling in general was done to position the header text and arrow icon for mobile view */
+  }
+
+  /* ----------------------------------------------------------------- */
+  /* (#)MAIN-CONTENT SECTION */
+  /* ----------------------------------------------------------------- */
+
+  .main-content-item {
+    height: 50vh;
+    /* this was added to make the main content section smaller in height when in mobile view */
+  }
+
+  .main-content-item.text-only {
+    padding: 0rem 2rem;
+    /* this was added to make the text-only container smaller in padding when in mobile view */
+    text-align: center;
+  }
+
+  .main-content-item.img-only-1 {
+    background-image: url(images/mobile/image-transform.jpg);
+    background-position: center;
+  }
+
+  .main-content-item.img-only-2 {
+    background-image: url(images/mobile/image-stand-out.jpg);
+    background-position: center;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 815px) {
+  .main-content-item.text-only {
+    padding: 0rem 2rem;
+    /* this was added to make the text within this container to not overflow */
+  }
+}
+
+@media (min-width: 900px) {
+  .main-content-item.img-with-text .text {
+    padding: 0 2rem;
+    /* this was done just to make the display of the text within the last two items of the main-content section to look as close as possible to the UI design of the page */
+  }
+}
+
+@media (min-width: 1000px) {
+  .main-content-item.img-with-text .text {
+    padding: 0 6rem;
+    /* this was done just to make the display of the text within the last two items of the main-content section to look as close as possible to the UI design of the page */
   }
 }
