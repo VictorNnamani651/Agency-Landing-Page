@@ -243,10 +243,6 @@ div.extras-container {
   height: 50vh;
 }
 
-div.extras-container div {
-  /* border: 1px solid blue; */
-}
-
 div.extras-container div img {
   object-fit: cover;
   height: 100%;
