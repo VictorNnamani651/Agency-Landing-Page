@@ -96,7 +96,6 @@ h1,
 h5,
 h6,
 h3 {
-  /* border: 2px solid green; */
   font-family: "Fraunces", serif;
   font-weight: 900;
 }
@@ -132,10 +131,6 @@ a.yellow-link:hover {
 
 a.red-link:hover {
   text-decoration-color: #fc4c46;
-}
-
-.main-content-item.text-only div.center {
-  /* border: 2px solid purple; */
 }
 
 .main-content-item.text-only p {
@@ -250,6 +245,50 @@ div.extras-container div img {
 }
 
 /* ----------------------------------------------------------------- */
+/* FOOTER SECTION */
+/* ----------------------------------------------------------------- */
+footer {
+  background-color: #90d4c5;
+  min-height: fit-content;
+  height: 50vh;
+}
+
+div.footer {
+  min-height: fit-content;
+  height: 80%;
+}
+
+div.footer-logo-container {
+  width: fit-content;
+}
+
+.footer-logo {
+  color: #2d7565;
+  font-size: xx-large;
+}
+
+footer .footer-links {
+  min-width: fit-content;
+  width: 20vw;
+}
+
+.socials-links {
+  min-width: fit-content;
+  width: 10vw;
+}
+
+footer a {
+  text-decoration: none;
+  color: #2d7565;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+}
+
+footer a:hover {
+  color: white;
+}
+
+/* ----------------------------------------------------------------- */
 /* MOBILE VIEW STYLES */
 /* ----------------------------------------------------------------- */
 
@@ -349,30 +388,15 @@ div.extras-container div img {
     height: auto;
   }
   .centered {
-    border: 2px solid green;
     height: auto;
   }
 
   #testimonials .centered h3#testimony-title {
-    /* border: 2px solid red; */
     padding: 4rem 0px 5rem;
   }
 
   .testimony p {
     padding: 0px 4rem;
-  }
-}
-
-/* @media (min-width: 768px) and (max-width: 768px) {
-  #testimonials p.added-padding {
-    padding: 0 0.5rem ;
-  }
-} */
-
-@media (min-width: 768px) and (max-width: 815px) {
-  .main-content-item.text-only {
-    padding: 0rem 2rem;
-    /* this was added to make the text within this container to not overflow */
   }
 }
 
@@ -383,6 +407,13 @@ div.extras-container div img {
   }
 }
 
+@media (min-width: 768px) and (max-width: 815px) {
+  .main-content-item.text-only {
+    padding: 0rem 2rem;
+    /* this was added to make the text within this container to not overflow */
+  }
+}
+
 @media (min-width: 1000px) {
   .main-content-item.img-with-text .text {
     padding: 0 6rem;
@@ -390,6 +421,42 @@ div.extras-container div img {
   }
 }
 
+/* ----------------------------------------------------------------- */
+/* footer============= */
+@media (max-width: 768px) {
+  /* ----------------------------------------------------------------- */
+  /* FOOTER SECTION */
+  /* ----------------------------------------------------------------- */
+
+  footer .footer-links {
+    min-width: fit-content;
+    width: 40vw;
+  }
+
+  footer .socials-links {
+    min-width: fit-content;
+    width: 30vw;
+  }
+}
+
+@media (max-width: 530px) {
+  /* ----------------------------------------------------------------- */
+  /* FOOTER SECTION */
+  /* ----------------------------------------------------------------- */
+
+  footer .footer-links {
+    min-width: fit-content;
+    width: 55vw;
+  }
+
+  footer .socials-links {
+    min-width: fit-content;
+    width: 45vw;
+  }
+}
+/* ---------------------------------------------------------------------- */
+
+/* ADDED PADDING TO THE MAIN CONTENT SECTION FOR DIFFERENT MOBILE SCREENS */
 @media (min-width: 550px) and (max-width: 768px) {
   .added-padding {
     padding: 0rem 6rem;
