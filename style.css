@@ -196,6 +196,7 @@ a.red-link:hover {
 
 #testimonials {
   height: 98vh;
+  min-height: fit-content;
   background-color: #fffbf8;
 }
 
